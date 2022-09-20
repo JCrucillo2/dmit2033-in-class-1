@@ -1,0 +1,99 @@
+:root {
+  --dark-color: #212121;
+  --light-color: #fff;
+  --main-color: #cf5c36;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+body {
+  line-height: 1.5;
+  font-family: sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* step 1 - layout nav items */
+
+nav {
+  padding: 0.625rem;
+  background-color: var(--dark-color);
+}
+
+main {
+  height: 100vh;
+  background-color: var(--main-color);
+}
+
+.content-svg {
+  width: 2.5rem;
+  height: 2.5rem;
+  fill: var(--main-color);
+}
+
+.inner-nav {
+  display: flex;
+  justify-content: space-between;
+  max-width: 56.25rem;
+  margin: 0 auto;
+  /* forcing the nav to hide the content */
+  height: 3.125rem;
+  /* collapsed nav height */
+  overflow: hidden;
+}
+
+/* step 2 - make your nav flexible */
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 1.25rem;
+}
+
+.nav-list li a {
+  transition: all 0.3s ease;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+}
+
+.nav-list li a:hover {
+  color: var(--main-color);
+  text-decoration-color: var(--main-color);
+}
+
+.nav-list li {
+  padding: 0 0.3125rem;
+  height: 3.125rem;
+  display: flex;
+  align-items: center;
+}
+
+.inner-nav a {
+  text-decoration: none;
+  color: var(--light-color);
+}
+
+.show {
+  height: auto;
+}
+
+@media screen and (min-width: 800px) {
+  .nav-link {
+    display: none;
+  }
+
+  .nav-list {
+    padding: 0;
+  }
+}
