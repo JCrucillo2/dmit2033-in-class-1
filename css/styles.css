@@ -25,16 +25,9 @@ ul {
   list-style-type: none;
 }
 
-/* step 1 - layout nav items */
-
 nav {
   padding: 0.625rem;
   background-color: var(--dark-color);
-}
-
-main {
-  height: 100vh;
-  background-color: var(--main-color);
 }
 
 .content-svg {
@@ -48,23 +41,22 @@ main {
   justify-content: space-between;
   max-width: 56.25rem;
   margin: 0 auto;
-  /* forcing the nav to hide the content */
   height: 3.125rem;
-  /* collapsed nav height */
   overflow: hidden;
 }
 
-/* step 2 - make your nav flexible */
 .nav-list {
   display: flex;
   flex-wrap: wrap;
+  gap: 1.25rem;
   padding: 0 1.25rem;
 }
 
 .nav-list li a {
-  transition: all 0.3s ease;
+  transition: all 0.2s ease-in-out;
   text-decoration: underline;
   text-decoration-color: transparent;
+  display: inline-block;
 }
 
 .nav-list li a:hover {
@@ -73,7 +65,6 @@ main {
 }
 
 .nav-list li {
-  padding: 0 0.3125rem;
   height: 3.125rem;
   display: flex;
   align-items: center;
@@ -86,6 +77,21 @@ main {
 
 .show {
   height: auto;
+}
+
+.logo {
+  position: relative;
+  top: 0.3125rem;
+}
+
+.toggle-ellipsis {
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  top: 0.875rem;
+}
+
+.toggle-ellipsis:hover {
+  color: var(--main-color);
 }
 
 @media screen and (min-width: 800px) {
