@@ -94,7 +94,7 @@ nav {
   color: var(--main-color);
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 820px) {
   .nav-link {
     display: none;
   }
